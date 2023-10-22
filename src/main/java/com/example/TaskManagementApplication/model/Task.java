@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Entity
 @Table
-public class Todo {
+public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
