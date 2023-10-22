@@ -1,4 +1,4 @@
-package com.example.TaskManagementApplication.Model;
+package com.example.TaskManagementApplication.model;
 
 
 import jakarta.persistence.*;

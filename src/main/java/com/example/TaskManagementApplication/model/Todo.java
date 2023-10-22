@@ -1,7 +1,6 @@
-package com.example.TaskManagementApplication.Model;
+package com.example.TaskManagementApplication.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -22,5 +21,6 @@ public class Todo {
 
     private boolean completed;
     private LocalDate deadline;
+    private Long userId;
 
 }
