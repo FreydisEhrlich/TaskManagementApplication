@@ -32,4 +32,7 @@ public class UserService {
         .orElseThrow(() -> new UserNotFoundException("User by id " + id + " was not found"));
     }
 
+    public User updateUser(User user){
+        return userRepo.save(user);
+    }
 }
