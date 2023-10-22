@@ -1,6 +1,6 @@
 package com.example.TaskManagementApplication.service;
 
-import com.example.TaskManagementApplication.Exception.UserNotFoundException;
+import com.example.TaskManagementApplication.exception.UserNotFoundException;
 import com.example.TaskManagementApplication.model.User;
 import com.example.TaskManagementApplication.repository.UserRepo;
 import jakarta.transaction.Transactional;
@@ -34,5 +34,9 @@ public class UserService {
 
     public User updateUser(User user){
         return userRepo.save(user);
+    }
+
+    public void deleteUser(Long id){
+        userRepo.deleteUserById(id);
     }
 }

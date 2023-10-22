@@ -7,6 +7,6 @@ import java.util.Optional;
 
 public interface ToDoRepo extends JpaRepository<Todo, Long> {
     Optional<Todo> findByTitle(String title);
-    Optional<Todo> findByUserId(Long id);
+    Optional<Todo> findByTaskId(Long id);
     void deleteTaskById(Long id);
 }
