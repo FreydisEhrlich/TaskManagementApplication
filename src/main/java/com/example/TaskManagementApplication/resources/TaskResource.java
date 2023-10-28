@@ -1,7 +1,6 @@
 package com.example.TaskManagementApplication.resources;
 
 import com.example.TaskManagementApplication.model.Task;
-import com.example.TaskManagementApplication.model.User;
 import com.example.TaskManagementApplication.service.TaskService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,12 +30,12 @@ public class TaskResource {
 
     @GetMapping("/find/{id}")
     public ResponseEntity<Task> getTaskById(@PathVariable("id") Long id){
-        Task task = taskService.findByTaskId(id);
+        Task task = taskService.findTaskById(id);
         return new ResponseEntity<>(task, HttpStatus.OK);
     }
 
     @GetMapping("/find/{title}")
-    public ResponseEntity<Task> getTaskByTitle(@PathVariable("title") String title){
+    public ResponseEntity<Task> findByTitle(@PathVariable("title") String title){
         Task task = taskService.findByTitle(title);
         return new ResponseEntity<>(task, HttpStatus.OK);
     }
