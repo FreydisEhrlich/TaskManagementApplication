@@ -2,7 +2,6 @@ package com.example.TaskManagementApplication.service;
 
 import com.example.TaskManagementApplication.exception.TaskNotFoundException;
 import com.example.TaskManagementApplication.model.Task;
-import com.example.TaskManagementApplication.model.User;
 import com.example.TaskManagementApplication.repository.TaskRepo;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,8 +27,8 @@ public class TaskService {
         return taskRepo.save(task);
     }
 
-    public Task findByTaskId(Long id){
-        return taskRepo.findById(id)
+    public Task findTaskById(Long id){
+        return taskRepo.findTaskById(id)
                 .orElseThrow(() -> new TaskNotFoundException("Task by id " + id + " was not found"));
     }
 
