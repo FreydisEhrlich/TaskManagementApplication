@@ -21,11 +21,10 @@ public class User {
     @Email
     @Column(nullable = false, unique = true)
     private String email;
-    private String password;
+    private String imageUrl;
 
-    public User(String name, String email, String password){
+    public User(String name, String email){
         this.name = name;
         this.email = email;
-        this.password = password;
     }
 }
