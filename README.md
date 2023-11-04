@@ -1,0 +1,1 @@
+Link to frontend part of this project: https://github.com/FreydisEhrlich/TaskManagementApplicationFrontend
